@@ -5,6 +5,9 @@
  * Version: 1.0.0
  */
 
+/**
+ * Posts fetcher class
+ */
 class post_fetcher {
 
 	protected $posts;
@@ -29,6 +32,10 @@ class post_fetcher {
 	}
 }
 
+/**
+ * Shortcode to render posts
+ * Uses the post_fetcher class
+ */
 add_shortcode( 'wp_learn_php8', 'wp_learn_php8_shortcode_render' );
 function wp_learn_php8_shortcode_render() {
 	$post_fetcher = new post_fetcher();
